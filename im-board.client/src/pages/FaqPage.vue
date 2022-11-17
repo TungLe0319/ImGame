@@ -10,10 +10,10 @@
       <div class="d-flex justify-content-center pt-4">
       </div>
       <div class="col-md-12 d-flex justify-content-center">
-        <img src="..\assets\img\accountpage.png" alt="" class="img-fluid">
+        <!-- <img src="..\assets\img\accountpage.png" alt="" class="img-fluid"> -->
       </div>
       <div class="col-md-12 d-flex justify-content-center mt-5">
-        <img src="/source/codeworks/im-board/im-board.client/src/assets/img/accountpage2.png" alt="" class="img-fluid">
+        <!-- <img src="/source/codeworks/im-board/im-board.client/src/assets/img/accountpage2.png" alt="" class="img-fluid"> -->
       </div>
     </div>
 
