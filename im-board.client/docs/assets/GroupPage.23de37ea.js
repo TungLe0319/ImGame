@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t}from"./index.db35827d.js";const s={setup(){return{}}},r={class:"group-page"};function c(a,n,p,_,u,d){return t(),o("div",r)}const i=e(s,[["render",c]]);export{i as default};

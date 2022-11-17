@@ -1,0 +1,1 @@
+import{_ as e,A as t,c as o,o as s}from"./index.db35827d.js";const _={setup(){return{}},components:{AuthorCard:t}},a={class:"aboutPage"};function c(n,r,p,u,d,i){return s(),o("div",a)}const f=e(_,[["render",c],["__scopeId","data-v-80539170"]]);export{f as default};

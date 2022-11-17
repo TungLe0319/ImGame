@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t,b as s}from"./index.db35827d.js";const c={setup(){return{}}},r={class:"profile-page"},a=s("h1",null,"Welcome to profile-page",-1),n=[a];function _(p,i,l,d,f,u){return t(),o("div",r,n)}const m=e(c,[["render",_]]);export{m as default};
