@@ -3,12 +3,20 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue({
+      template: {
+        transformAssetUrls: {
+          includeAbsolute: false,
+        },
+      },
+    }),
+  ],
   build: {
-    outDir: '../im-board/client',
-    sourcemap: false
+    outDir: "../im-board/client",
+    sourcemap: false,
   },
   server: {
-    port: 8080
-  }
-})
+    port: 8080,
+  },
+});
