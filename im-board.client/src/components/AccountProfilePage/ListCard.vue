@@ -61,7 +61,7 @@ export default {
           // console.log(props.boardGameList.gameId, props.boardGameList.listId);
           await listsService.removeGameFromList(props.boardGameList.listId)
         } catch (error) {
-          console.error('[RemoveGame]', error)
+         logger.error('[RemoveGame]', error)
           Pop.error(error)
         }
       }

@@ -188,6 +188,7 @@ import ActiveBoardGameVideos from "../components/BoardGame/ActiveBoardGameVideos
 import ABGReviews from "../components/BoardGame/ABGReviews.vue";
 import AddToList from "../components/BoardGame/AddToList.vue";
 import ABGPrices from "../components/BoardGame/ABGPrices.vue";
+import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
@@ -196,7 +197,7 @@ export default {
       try {
         await atlasGamesService.getBoardGameDetailsById(route.params.id);
       } catch (error) {
-        console.error("[getBoardGameDetailsById]", error);
+        logger.error("[getBoardGameDetailsById]", error);
         Pop.error(error);
       }
     }
@@ -205,7 +206,7 @@ export default {
       try {
         await atlasGamesService.getBoardGameImagesByGameId(route.params.id);
       } catch (error) {
-        console.error("[getBoardGameImagesByGameId]", error);
+        logger.error("[getBoardGameImagesByGameId]", error);
         Pop.error(error);
       }
     }
@@ -214,7 +215,7 @@ export default {
       try {
         await atlasGamesService.getBoardGamePricesByGameId(route.params.id);
       } catch (error) {
-        console.error("[getBoardGamePricedByGameId]", error);
+        logger.error("[getBoardGamePricedByGameId]", error);
         Pop.error(error);
       }
     }
@@ -222,7 +223,7 @@ export default {
       try {
         await atlasGamesService.getBoardGameVideosByGameId(route.params.id);
       } catch (error) {
-        console.error("[getBoardGameVideosByGameId]", error);
+        logger.error("[getBoardGameVideosByGameId]", error);
         Pop.error(error);
       }
     }
@@ -231,7 +232,7 @@ export default {
       try {
         await atlasGamesService.getBoardGameReviewsByGameId(route.params.id);
       } catch (error) {
-        console.error("[getBoardGameReviewsByGameId]", error);
+        logger.error("[getBoardGameReviewsByGameId]", error);
         Pop.error(error);
       }
     }

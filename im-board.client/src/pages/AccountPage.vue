@@ -106,6 +106,7 @@ import EditName from "../components/AccountProfilePage/EditName.vue";
 import EditPic from "../components/AccountProfilePage/EditPic.vue";
 import InviteLink from "../components/socketStuff/InviteLink.vue";
 import { inboxService } from "../services/InboxService.js";
+import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
@@ -123,7 +124,7 @@ export default {
         await accountService.getMyLists();
         AppState.bgLists.filter((f) => f.listName == "favorite");
       } catch (error) {
-        console.error("[get my lists]", error);
+        logger.error("[get my lists]", error);
         Pop.error(error);
       }
     }

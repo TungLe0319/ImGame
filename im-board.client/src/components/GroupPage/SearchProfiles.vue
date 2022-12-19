@@ -29,6 +29,7 @@ import { profilesService } from '../../services/ProfilesService.js';
 import Pop from '../../utils/Pop.js';
 import { computed } from '@vue/reactivity';
 import { AppState } from '../../AppState.js';
+import { logger } from "../../utils/Logger.js";
 export default {
   setup() {
 
@@ -42,7 +43,7 @@ export default {
 
           await profilesService.getProfiles(editable.value.term);
         } catch (error) {
-          console.error('searchProfiles', error);
+          logger.error('searchProfiles', error);
         }
       },
 

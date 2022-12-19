@@ -45,6 +45,7 @@
 import { ref, watchEffect } from "vue";
 import { AppState } from "../../AppState.js";
 import { accountService } from "../../services/AccountService.js";
+import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 export default {
   setup() {
@@ -59,7 +60,7 @@ export default {
         try {
           await accountService.editAccount(editable.value);
         } catch (error) {
-          console.error(error);
+          logger.error(error);
           Pop.error(error, "[EditBanner]");
         }
       },

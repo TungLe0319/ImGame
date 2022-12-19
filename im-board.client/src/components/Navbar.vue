@@ -138,6 +138,7 @@ import { groupsService } from "../services/GroupsService.js";
 import { listsService } from "../services/ListsService.js";
 import { gameNightsService } from "../services/GameNightsService.js";
 import { router } from "../router.js";
+import { logger } from "../utils/Logger.js";
 
 export default {
   setup() {
@@ -173,7 +174,7 @@ export default {
         try {
           await inboxService.deleteInvite(id)
         } catch (error) {
-          console.error('[]', error)
+          logger.error('[]', error)
           Pop.error(error)
         }
 

@@ -84,6 +84,7 @@ import { AppState } from "../../AppState.js";
 import { BGList } from "../../models/BoardGame/BGList.js";
 import { GroupMembers } from "../../models/GroupsAndGameNight/GroupMember.js";
 import { listsService } from "../../services/ListsService.js";
+import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 
 export default {
@@ -116,7 +117,7 @@ export default {
           // console.log(props.boardGameList.gameId, props.boardGameList.listId);
           await listsService.removeGameFromList(props.boardGameList.listId);
         } catch (error) {
-          console.error("[RemoveGame]", error);
+          logger.error("[RemoveGame]", error);
           Pop.error(error);
         }
       },

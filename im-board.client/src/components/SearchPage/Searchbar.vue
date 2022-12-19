@@ -23,6 +23,7 @@
 <script>
 import { ref } from "vue";
 import { atlasGamesService } from "../../services/AtlasGamesService.js";
+import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 
 export default {
@@ -36,7 +37,7 @@ export default {
           await atlasGamesService.getBoardGamesByQuery(editable.value);
           editable.value = "";
         } catch (error) {
-          console.error("dfd", error);
+          logger.error("dfd", error);
         }
       },
     };

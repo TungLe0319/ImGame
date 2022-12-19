@@ -40,6 +40,7 @@
 import { ref } from "vue";
 import { useRoute } from "vue-router";
 import { gameNightsService } from "../../services/GameNightsService.js";
+import { logger } from "../../utils/Logger.js";
 import Pop from "../../utils/Pop.js";
 
 export default {
@@ -55,7 +56,7 @@ export default {
           // console.log(editable.value);
           await gameNightsService.makeGameNight(editable.value);
         } catch (error) {
-          console.error("[]", error);
+          logger.error("[]", error);
           Pop.error(error);
         }
       },

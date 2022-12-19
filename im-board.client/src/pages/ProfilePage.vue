@@ -125,6 +125,7 @@ import ListCard from "../components/AccountProfilePage/ListCard.vue";
 import GroupGamesCard from "../components/GroupPage/GroupGamesCard.vue";
 import { useRoute } from "vue-router";
 import { profilesService } from "../services/ProfilesService.js";
+import { logger } from "../utils/Logger.js";
 export default {
   setup() {
     const filterBg = ref("favorite");
@@ -141,7 +142,7 @@ export default {
       try {
         await profilesService.getProfileLists(route.params.id);
       } catch (error) {
-        console.error("[get my lists]", error);
+        logger.error("[get my lists]", error);
         Pop.error(error);
       }
     }
